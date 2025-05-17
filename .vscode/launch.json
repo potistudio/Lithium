@@ -1,0 +1,42 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'lithium'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=lithium",
+					"--package=lithium"
+				],
+				"filter": {
+					"name": "lithium",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'lithium'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=lithium",
+					"--package=lithium"
+				],
+				"filter": {
+					"name": "lithium",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}
